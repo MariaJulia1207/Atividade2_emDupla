@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4676919138045038993}
   - component: {fileID: 6664642334613984589}
   - component: {fileID: 225775362851139219}
-  - component: {fileID: 333556440753412200}
+  - component: {fileID: -5786525620042562894}
   m_Layer: 0
   m_Name: Quadrado
   m_TagString: Untagged
@@ -163,7 +163,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &333556440753412200
+--- !u!114 &-5786525620042562894
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,4 +175,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27e403d3bdedfe94da535bbabc55729d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 10
+  velocidade: 5

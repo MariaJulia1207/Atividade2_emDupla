@@ -19,8 +19,10 @@ public class Collision : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Colidiu com: " + collision.gameObject);
         Destroy(collision.gameObject);
         direcao = -direcao;
+        // Pausando o tempo:
+        Time.timeScale = 0f;
+        Debug.Log("Game Over!");
     }
 }

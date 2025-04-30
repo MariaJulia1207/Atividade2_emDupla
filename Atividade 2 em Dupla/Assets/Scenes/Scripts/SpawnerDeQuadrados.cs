@@ -3,7 +3,7 @@ using UnityEngine;
 public class SpawnerDeQuadrados : MonoBehaviour
 {
     public GameObject quadradoPrefab;
-    public float intervalo = 1f;
+    public float intervalo = 2f;
     private float tempoProximoSpawn;
     
     void Start()
@@ -21,11 +21,15 @@ public class SpawnerDeQuadrados : MonoBehaviour
 
     void SpawnarQuadrado()
     {
+        // Setando gravidade aleatória entre 0.5 e 10:
+        quadradoPrefab.GetComponent<Rigidbody2D>().gravityScale = Random.Range(0.5f,10f);
+        
         // Define largura da tela
         float larguraTela = Camera.main.orthographicSize * Camera.main.aspect;
         float posX = Random.Range(-larguraTela, larguraTela);
         Vector2 posicaoSpawn = new Vector2(posX, Camera.main.orthographicSize + 1f);
         GameObject novoQuadrado = Instantiate(quadradoPrefab, posicaoSpawn, Quaternion.identity);
+        
     }
 
 }
